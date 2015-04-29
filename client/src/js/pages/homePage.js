@@ -16,11 +16,16 @@ var homeScreen = PageView.extend({
   buttonEvents: {
     right: 'goToContacts',
     top: 'scrollUp',
-    bottom: 'scrollDown'
+    bottom: 'scrollDown',
+    left: 'goToQuiz'
   },
 
   goToContacts: function() {
     global.App.navigate('contacts', true);
+  },
+
+  goToQuiz: function() {
+    global.App.navigate('quiz', true);
   },
 
   scrollUp: function() {
