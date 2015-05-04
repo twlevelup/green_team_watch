@@ -5,8 +5,13 @@
 
 - auto-run tests in dev mode
 
-- Support for notifications
-- Mongo DB backend (with express?)
+- Support for notifications - adam
+
+- Mongo DB backend (with express?) - james (node expressapp?) benm repo app directory...
+- grunt task to start mongo in parallel (concurrent)
+- rendering test for collections contacts page - where is the html
+
+- code covereage... (browserify)
 
 - example test for loading data
 - example of sending a notifications (extra buttons on index page?)
@@ -19,7 +24,6 @@
 - click, double click, click and hold events
 - keyboard shortcuts for watch buttons
 - Separate stylesheets for layout/scafloding and actual app
-- jquery, underscore, backbone in separate vendor bundle
 - add automated check for test coverage (set at 80% and fail the build?)
 
 # Notes
