@@ -19,7 +19,7 @@ var ResultView = PageView.extend({
     top: 'goToHomePage',
     bottom: 'goToHomePage',
     left: 'goToHomePage',
-    face: 'goToHomePage',
+    face: 'goToHomePage'
   },
 
   // goToContacts: function() {
