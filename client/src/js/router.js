@@ -4,10 +4,12 @@ var Router = require('./framework/router.js'),
   HomePage = require('./pages/homePage'),
   ContactsPage = require('./pages/contactsPage'),
   QuizPage = require('./pages/quizPage'),
+  InfoPage = require('./pages/infoPage'),
   ResultPage = require('./pages/resultPage'),
   homePage = new HomePage(),
   contactsPage = new ContactsPage(),
   quizPage = new QuizPage(),
+  infoPage = new InfoPage(),
   resultPage = new ResultPage();
 
 var AppRouter = Router.extend({
