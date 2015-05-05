@@ -12,11 +12,11 @@ var PageView = require('../framework/page');
 
 var InfoView = PageView.extend({
 
-    id: 'info',
+  id: 'info',
 
-    template: require('../../templates/pages/info.hbs'),
+  template: require('../../templates/pages/info.hbs'),
 
-    buttonEvents: {
+  buttonEvents: {
       right: 'goToQuizPage',
       face: 'goToQuizPage',
       left: 'goToQuizPage',
@@ -24,19 +24,19 @@ var InfoView = PageView.extend({
       bottom: 'goToQuizPage'
     },
 
-    goToQuizPage: function() {
-      global.App.router.navigate('quiz', true);
+  goToQuizPage: function() {
+      global.App.navigate('quiz', true);
     },
 
-    render: function() {
+  render: function() {
 
-      this.$el.html(this.template());
+    this.$el.html(this.template());
 
-      return this;
-
-    }
+    return this;
 
   }
+
+}
 );
 
 module.exports = InfoView;
