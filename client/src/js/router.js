@@ -4,16 +4,19 @@ var Router = require('./framework/router.js'),
   HomePage = require('./pages/homePage'),
   ContactsPage = require('./pages/contactsPage'),
   QuizPage = require('./pages/quizPage'),
+  ResultPage = require('./pages/resultPage'),
   homePage = new HomePage(),
   contactsPage = new ContactsPage(),
-  quizPage = new QuizPage();
+  quizPage = new QuizPage(),
+  resultPage = new ResultPage();
 
 var AppRouter = Router.extend({
 
   routes: {
     '': 'home',
     contacts: 'contacts',
-    quiz: 'quiz'
+    quiz: 'quiz',
+    result: 'result'
   },
 
   home: function() {
@@ -26,6 +29,10 @@ var AppRouter = Router.extend({
 
   quiz: function() {
     this.renderView(quizPage);
+  },
+
+  result: function() {
+    this.renderView(resultPage);
   }
 
 });

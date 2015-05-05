@@ -1,3 +1,4 @@
+//result page
 'use strict';
 
 var Backbone = require('backbone'),
@@ -7,18 +8,18 @@ Backbone.$ = $;
 
 var PageView = require('../framework/page');
 
-var QuizView = PageView.extend({
+var ResultView = PageView.extend({
 
-  id: 'quiz',
+  id: 'result',
 
-  template: require('../../templates/pages/quiz.hbs'),
+  template: require('../../templates/pages/result.hbs'),
 
   buttonEvents: {
-    right: 'goToResultPage',
-    top: 'goToResultPage',
-    bottom: 'goToResultPage',
-    left: 'goToResultPage',
-    face: 'goToResultPage'
+    right: 'goToHomePage',
+    top: 'goToHomePage',
+    bottom: 'goToHomePage',
+    left: 'goToHomePage',
+    face: 'goToHomePage',
   },
 
   // goToContacts: function() {
@@ -37,8 +38,8 @@ var QuizView = PageView.extend({
   //   $('#watch-face').animate({scrollTop: '+=70px'});
   // },
 
-  goToResultPage: function() {
-    global.App.navigate('result', true);
+  goToHomePage: function() {
+    global.App.navigate('', true);
   },
 
   render: function() {
@@ -51,4 +52,4 @@ var QuizView = PageView.extend({
 
 });
 
-module.exports = QuizView;
+module.exports = ResultView;
