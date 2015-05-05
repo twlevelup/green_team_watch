@@ -1,3 +1,9 @@
 #home {
-  font-style: italic;
+  font-weight: bold;
+
+  .center {
+    text-align: center;
+    height: 100%;
+    padding-top: 100px;
+  }
 }

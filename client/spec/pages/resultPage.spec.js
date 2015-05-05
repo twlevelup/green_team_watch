@@ -1,23 +1,23 @@
 'use strict';
 
-var HomePage = require('../../src/js/pages/homePage'),
+var ResultPage = require('../../src/js/pages/resultPage'),
   Router = require('../../src/js/router'),
   App = require('../../src/js/app');
 
 global.App = App;
 
-describe('The Home Page', function() {
+describe('The Result Page', function() {
 
-  var homePage;
+  var resultPage;
 
   beforeEach(function () {
-    homePage = new HomePage();
+    resultPage = new ResultPage();
   });
 
   describe('button event handlers', function () {
 
     beforeEach(function () {
-      homePage.setButtonEvents();
+      resultPage.setButtonEvents();
     });
 
     describe('right', function () {
@@ -26,9 +26,9 @@ describe('The Home Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the contacts page', function () {
+      it('should take the user to the home page', function () {
 
-        homePage.trigger('right');
+        resultPage.trigger('right');
 
         expect(global.App.navigate).toHaveBeenCalled();
       });
@@ -40,12 +40,12 @@ describe('The Home Page', function() {
   describe('rendering', function () {
 
     it('should produce the correct HTML', function () {
-      homePage.render();
-      expect(homePage.el.innerHTML).toContain('<div class="center">Press any key to start!</div>');
+      resultPage.render();
+      expect(resultPage.el.innerHTML).toContain('<div>Result</div>');
     });
 
     it('returns the view object', function() {
-      expect(homePage.render()).toEqual(homePage);
+      expect(resultPage.render()).toEqual(resultPage);
     });
 
   });

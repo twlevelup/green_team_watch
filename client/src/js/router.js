@@ -16,7 +16,8 @@ var AppRouter = Router.extend({
     '': 'home',
     contacts: 'contacts',
     quiz: 'quiz',
-    result: 'result'
+    result: 'result',
+    info: 'info'
   },
 
   home: function() {
@@ -33,6 +34,10 @@ var AppRouter = Router.extend({
 
   result: function() {
     this.renderView(resultPage);
+  },
+
+  info: function() {
+    this.renderView(infoPage);
   }
 
 });
