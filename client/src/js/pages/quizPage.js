@@ -37,7 +37,7 @@ var QuizView = PageView.extend({
   // },
 
   goToHomePage: function() {
-    global.App.router.navigate('', true);
+    global.App.navigate('', true);
   },
 
   render: function() {
