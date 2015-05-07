@@ -18,18 +18,20 @@ var ContactsView = PageView.extend({
   },
 
   initialize: function() {
-    this.contactsCollection = new ContactsCollection();
     var self = this;
-    this.contactsCollection.fetch({
-      reset: true,
-      success: function() {
-        self.render();
-      }
-    });
+
+    this.contactsCollection = new ContactsCollection();
+    this.listenTo(this.contactsCollection, "change", this.render);
+
+    self.seedContacts();
   },
 
-  loadContacts: function() {
-    this.contactsCollection.push();
+  seedContacts: function() {
+    this.contactsCollection.push([
+      {name: 'Adam', phoneNumber: '0431 111 111'},
+      {name: 'James', phoneNumber: '0431 222 222'},
+      {name: 'Marzena', phoneNumber: '0431 333 333'}
+    ]);
   },
 
   screenClickExample: function() {
@@ -53,7 +55,6 @@ var ContactsView = PageView.extend({
     this.$el.append(contactsHTML);
 
     return this;
-
   },
 
   createContactHTML: function(contact) {
