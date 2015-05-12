@@ -103,7 +103,7 @@ describe('The Info Page', function() {
 
     it('should produce the correct HTML', function () {
       infoPage.render();
-      expect(infoPage.el.innerHTML).toContain('<p>Kangaroo</p>');
+      expect(infoPage.el.innerHTML).toContain('>Kangaroo</font>');
     });
 
     it('returns the view object', function() {
