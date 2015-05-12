@@ -26,11 +26,56 @@ describe('The Home Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the contacts page', function () {
+      it('should take the user to the info page', function () {
 
         homePage.trigger('right');
 
-        expect(global.App.navigate).toHaveBeenCalled();
+        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+      });
+
+    });    
+
+    describe('top', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('should take the user to the info page', function () {
+
+        homePage.trigger('top');
+
+        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+      });
+
+    });    
+
+    describe('left', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('should take the user to the info page', function () {
+
+        homePage.trigger('left');
+
+        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+      });
+
+    });
+
+        describe('bottom', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('should take the user to the info page', function () {
+
+        homePage.trigger('bottom');
+
+        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
       });
 
     });
