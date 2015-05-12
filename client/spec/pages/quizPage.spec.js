@@ -26,16 +26,77 @@ describe('The Quiz Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the results page', function () {
+      it('should take the user to the result page', function () {
 
         quizPage.trigger('right');
 
-        expect(global.App.navigate).toHaveBeenCalled();
+        expect(global.App.navigate).toHaveBeenCalledWith('result', true);
+      });
+
+    });    
+
+    describe('top', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('should take the user to the result page', function () {
+
+        quizPage.trigger('top');
+
+        expect(global.App.navigate).toHaveBeenCalledWith('result', true);
+      });
+
+    });    
+
+    describe('left', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('should take the user to the result page', function () {
+
+        quizPage.trigger('left');
+
+        expect(global.App.navigate).toHaveBeenCalledWith('result', true);
+      });
+
+    });
+
+        describe('bottom', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('should take the user to the result page', function () {
+
+        quizPage.trigger('bottom');
+
+        expect(global.App.navigate).toHaveBeenCalledWith('result', true);
+      });
+
+    });
+
+        describe('face', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('should take the user to the result page', function () {
+
+        quizPage.trigger('face');
+
+        expect(global.App.navigate).toHaveBeenCalledWith('result', true);
       });
 
     });
 
   });
+
 
   describe('rendering', function () {
 

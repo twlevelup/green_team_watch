@@ -39,7 +39,7 @@ var ResultView = PageView.extend({
   // },
 
   goToHomePage: function() {
-    global.App.navigate('', true);
+    global.App.navigate('home', true);
   },
 
   render: function() {

@@ -12,7 +12,8 @@ var homeScreen = PageView.extend({
     right: 'goToInfo',
     top: 'goToInfo',
     bottom: 'goToInfo',
-    left: 'goToInfo'
+    left: 'goToInfo',
+    face: 'goToInfo'
   },
 
   goToInfo: function() {

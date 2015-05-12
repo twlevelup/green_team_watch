@@ -14,6 +14,7 @@ describe('The Result Page', function() {
     resultPage = new ResultPage();
   });
 
+
   describe('button event handlers', function () {
 
     beforeEach(function () {
@@ -30,7 +31,67 @@ describe('The Result Page', function() {
 
         resultPage.trigger('right');
 
-        expect(global.App.navigate).toHaveBeenCalled();
+        expect(global.App.navigate).toHaveBeenCalledWith('home', true);
+      });
+
+    });    
+
+    describe('top', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('should take the user to the home page', function () {
+
+        resultPage.trigger('top');
+
+        expect(global.App.navigate).toHaveBeenCalledWith('home', true);
+      });
+
+    });    
+
+    describe('left', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('should take the user to the home page', function () {
+
+        resultPage.trigger('left');
+
+        expect(global.App.navigate).toHaveBeenCalledWith('home', true);
+      });
+
+    });
+
+        describe('bottom', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('should take the user to the home page', function () {
+
+        resultPage.trigger('bottom');
+
+        expect(global.App.navigate).toHaveBeenCalledWith('home', true);
+      });
+
+    });
+
+        describe('face', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('should take the user to the home page', function () {
+
+        resultPage.trigger('face');
+
+        expect(global.App.navigate).toHaveBeenCalledWith('home', true);
       });
 
     });

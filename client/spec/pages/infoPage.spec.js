@@ -30,7 +30,7 @@ describe('The Info Page', function() {
 
         infoPage.trigger('right');
 
-        expect(global.App.navigate).toHaveBeenCalled();
+        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
       });
 
     });
@@ -46,7 +46,7 @@ describe('The Info Page', function() {
 
         infoPage.trigger('top');
 
-        expect(global.App.navigate).toHaveBeenCalled();
+        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
       });
 
     });
@@ -61,7 +61,7 @@ describe('The Info Page', function() {
 
         infoPage.trigger('left');
 
-        expect(global.App.navigate).toHaveBeenCalled();
+        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
       });
 
     });
@@ -77,7 +77,7 @@ describe('The Info Page', function() {
 
         infoPage.trigger('bottom');
 
-        expect(global.App.navigate).toHaveBeenCalled();
+        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
       });
 
     });
@@ -92,7 +92,7 @@ describe('The Info Page', function() {
 
         infoPage.trigger('face');
 
-        expect(global.App.navigate).toHaveBeenCalled();
+        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
       });
 
     });

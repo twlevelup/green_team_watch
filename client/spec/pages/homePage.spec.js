@@ -80,6 +80,21 @@ describe('The Home Page', function() {
 
     });
 
+        describe('face', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('should take the user to the info page', function () {
+
+        homePage.trigger('face');
+
+        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+      });
+
+    });
+
   });
 
   describe('rendering', function () {
