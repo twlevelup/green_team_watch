@@ -29,8 +29,8 @@ describe('The Kangaroo Info Page', function() {
       it('right button should take the user to the Koala page', function () {
 
         infoPage.trigger('right');
+        expect(global.App.navigate).toHaveBeenCalledWith('koala', true);
 
-        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
       });
 
     });
@@ -60,8 +60,8 @@ describe('The Kangaroo Info Page', function() {
       it('left button should take the user to the Koala page', function () {
 
         infoPage.trigger('left');
+        expect(global.App.navigate).toHaveBeenCalledWith('koala', true);
 
-        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
       });
 
     });

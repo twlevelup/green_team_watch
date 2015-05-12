@@ -30,7 +30,7 @@ describe('The Home Page', function() {
 
         homePage.trigger('right');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('kangaroo', true);
       });
 
     });    
@@ -45,7 +45,7 @@ describe('The Home Page', function() {
 
         homePage.trigger('top');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('kangaroo', true);
       });
 
     });    
@@ -60,7 +60,7 @@ describe('The Home Page', function() {
 
         homePage.trigger('left');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('kangaroo', true);
       });
 
     });
@@ -75,7 +75,8 @@ describe('The Home Page', function() {
 
         homePage.trigger('bottom');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('kangaroo', true);
+
       });
 
     });
@@ -90,7 +91,9 @@ describe('The Home Page', function() {
 
         homePage.trigger('face');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+
+        expect(global.App.navigate).toHaveBeenCalledWith('kangaroo', true);
+
       });
 
     });
