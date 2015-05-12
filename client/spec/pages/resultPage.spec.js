@@ -31,7 +31,7 @@ describe('The Result Page', function() {
 
         resultPage.trigger('right');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('home', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('', true);
       });
 
     });    
@@ -46,7 +46,7 @@ describe('The Result Page', function() {
 
         resultPage.trigger('top');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('home', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('', true);
       });
 
     });    
@@ -61,7 +61,7 @@ describe('The Result Page', function() {
 
         resultPage.trigger('left');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('home', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('', true);
       });
 
     });
@@ -70,13 +70,13 @@ describe('The Result Page', function() {
 
       beforeEach(function () {
         spyOn(global.App, 'navigate');
-      });
+      }); 
 
       it('should take the user to the home page', function () {
 
         resultPage.trigger('bottom');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('home', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('', true);
       });
 
     });
@@ -91,7 +91,7 @@ describe('The Result Page', function() {
 
         resultPage.trigger('face');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('home', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('', true);
       });
 
     });
