@@ -26,9 +26,71 @@ describe('The Info Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the info page', function () {
+      it('right button should take the user to the quiz page', function () {
 
         infoPage.trigger('right');
+
+        expect(global.App.navigate).toHaveBeenCalled();
+      });
+
+    });
+
+
+  describe('top', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('top button should take the user to the quiz page', function () {
+
+        infoPage.trigger('top');
+
+        expect(global.App.navigate).toHaveBeenCalled();
+      });
+
+    });
+
+    describe('left', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('left button should take the user to the quiz page', function () {
+
+        infoPage.trigger('left');
+
+        expect(global.App.navigate).toHaveBeenCalled();
+      });
+
+    });
+
+
+    describe('bottom', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('bottom should take the user to the quiz page', function () {
+
+        infoPage.trigger('bottom');
+
+        expect(global.App.navigate).toHaveBeenCalled();
+      });
+
+    });
+
+    describe('face', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('face button should take the user to the quiz page', function () {
+
+        infoPage.trigger('face');
 
         expect(global.App.navigate).toHaveBeenCalled();
       });
