@@ -8,7 +8,7 @@ var InfoView = Backbone.View.extend({
 
   tagName: 'li',
 
-  template: require('../../templates/pages/info.hbs'),
+  template: require('../../templates/pages/info_Kangaroo.hbs'),
 
   initialize: function() {
     _.bindAll(this, 'render');

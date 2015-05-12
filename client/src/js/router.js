@@ -4,12 +4,14 @@ var Router = require('./framework/router.js'),
   HomePage = require('./pages/homePage'),
   ContactsPage = require('./pages/contactsPage'),
   QuizPage = require('./pages/quizPage'),
-  InfoPage = require('./pages/infoPage'),
+  KangarooPage = require('./pages/infoPage_Kangaroo'),
+  KoalaPage = require('./pages/infoPage_Koala'),
   ResultPage = require('./pages/resultPage'),
   homePage = new HomePage(),
   contactsPage = new ContactsPage(),
   quizPage = new QuizPage(),
-  infoPage = new InfoPage(),
+  kangarooPage = new KangarooPage(),
+  koalaPage = new KoalaPage(),
   resultPage = new ResultPage();
 
 var AppRouter = Router.extend({
@@ -19,7 +21,9 @@ var AppRouter = Router.extend({
     contacts: 'contacts',
     quiz: 'quiz',
     result: 'result',
-    info: 'info'
+    kangaroo: 'kangaroo',
+    koala: 'koala'
+
   },
 
   home: function() {
@@ -38,8 +42,12 @@ var AppRouter = Router.extend({
     this.renderView(resultPage);
   },
 
-  info: function() {
-    this.renderView(infoPage);
+  kangaroo: function() {
+    this.renderView(kangarooPage);
+  },
+
+  koala: function() {
+    this.renderView(koalaPage);
   }
 
 });

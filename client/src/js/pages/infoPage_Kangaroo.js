@@ -12,20 +12,24 @@ var PageView = require('../framework/page');
 
 var InfoView = PageView.extend({
 
-  id: 'info',
+  id: 'kangaroo',
 
-  template: require('../../templates/pages/info.hbs'),
+  template: require('../../templates/pages/info_Kangaroo.hbs'),
 
   buttonEvents: {
-      right: 'goToQuizPage',
+      right: 'goToKoalaPage',
       face: 'goToQuizPage',
-      left: 'goToQuizPage',
+      left: 'goToKoalaPage',
       top: 'goToQuizPage',
       bottom: 'goToQuizPage'
     },
 
   goToQuizPage: function() {
       global.App.navigate('quiz', true);
+    },
+
+  goToKoalaPage: function() {
+      global.App.navigate('koala', true);
     },
 
   render: function() {

@@ -1,12 +1,12 @@
 'use strict';
 
-var InfoPage = require('../../src/js/pages/infoPage'),
+var InfoPage = require('../../src/js/pages/infoPage_Kangaroo'),
   Router = require('../../src/js/router'),
   App = require('../../src/js/app');
 
 global.App = App;
 
-describe('The Info Page', function() {
+describe('The Kangaroo Info Page', function() {
 
   var infoPage;
 
@@ -26,7 +26,7 @@ describe('The Info Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('right button should take the user to the quiz page', function () {
+      it('right button should take the user to the Koala page', function () {
 
         infoPage.trigger('right');
 
@@ -57,7 +57,7 @@ describe('The Info Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('left button should take the user to the quiz page', function () {
+      it('left button should take the user to the Koala page', function () {
 
         infoPage.trigger('left');
 
