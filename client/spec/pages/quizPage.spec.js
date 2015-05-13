@@ -142,7 +142,7 @@ describe('The Quiz Page', function() {
 
     it('should produce the correct HTML text <p>kangaroo</p>', function () {
       quizPage.render();
-      expect(quizPage.el.innerHTML).toContain('<p>Kangaroo</p>');
+      expect(quizPage.el.innerHTML).toContain('kangaroo');
     });
 
     it('returns the view object', function() {
