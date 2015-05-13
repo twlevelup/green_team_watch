@@ -101,7 +101,12 @@ describe('The Koala Info Page', function() {
 
   describe('rendering', function () {
 
-    it('should produce the correct HTML', function () {
+   it('should produce the correct image of a koala', function () {
+      infoPage.render();
+      expect(infoPage.el.innerHTML).toContain('/images/koala.png');
+    });
+
+    it('should produce the correct HTML text Koala', function () {
       infoPage.render();
       expect(infoPage.el.innerHTML).toContain('<p>Koala</p>');
     });
