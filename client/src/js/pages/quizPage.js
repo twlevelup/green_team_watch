@@ -12,15 +12,17 @@ var PageView = require('../framework/page');
 var QuizView = PageView.extend({
 
   id: 'quiz',
-  answer: '',
+  size: 2,
+  // assign answer to have a default index
+  index: 0,
 
   template: require('../../templates/pages/quiz.hbs'),
 
   buttonEvents: {
-    right: 'goToResultPage',
+    right: 'scrollAnswerRight',
     top: 'goToResultPage',
     bottom: 'goToResultPage',
-    left: 'goToResultPage',
+    left: 'scrollAnswerLeft',
     face: 'goToResultPage'
   },
 
@@ -28,9 +30,26 @@ var QuizView = PageView.extend({
     global.App.navigate('result', true);
   },
 
+  scrollAnswerLeft: function() {
+    if((this.index - 1) < 0) {
+      return;
+    }
+    this.index -= 1;
+
+    this.render();
+  },
+
+  scrollAnswerRight: function() {
+    if((this.index + 1) >= this.size) {
+      return;
+    }
+    this.index += 1;
+    this.render();
+  },
+
   render: function() {
 
-    this.$el.html(this.template({ answer: answers[1]}));
+    this.$el.html(this.template({ answer: answers[this.index]}));
 
     return this;
 

@@ -23,17 +23,62 @@ describe('The Quiz Page', function() {
     describe('right', function () {
 
       beforeEach(function () {
-        spyOn(global.App, 'navigate');
+        quizPage.size = 2;
       });
 
-      it('should take the user to the result page', function () {
+      describe('when index < size', function(){
 
-        quizPage.trigger('right');
+        it('should add 1 to the answer index', function () {
 
-        expect(global.App.navigate).toHaveBeenCalledWith('result', true);
+          quizPage.index = 0;
+          quizPage.trigger('right');
+
+          expect(quizPage.index).toEqual(1);
+        });
+
+      });
+      
+      describe('when index = size', function(){
+
+        it('should not add 1 to the answer index', function () {
+
+          quizPage.index = 1;
+          quizPage.trigger('right');
+
+          expect(quizPage.index).toEqual(1);
+        });    
+
       });
 
-    });    
+    }); 
+
+    describe('left', function () {
+
+      describe('when index > 0', function(){
+
+        it('should take 1 from the answer index', function () {
+
+          quizPage.index = 1;
+          quizPage.trigger('left');
+
+          expect(quizPage.index).toEqual(0);
+        });
+
+      });
+      
+      describe('when index <= 0', function(){
+
+        it('should not take 1 from the answer index', function () {
+
+          quizPage.index = 0;
+          quizPage.trigger('left');
+
+          expect(quizPage.index).toEqual(0);
+        });    
+
+      });
+
+    });       
 
     describe('top', function () {
 
@@ -49,21 +94,6 @@ describe('The Quiz Page', function() {
       });
 
     });    
-
-    describe('left', function () {
-
-      beforeEach(function () {
-        spyOn(global.App, 'navigate');
-      });
-
-      it('should take the user to the result page', function () {
-
-        quizPage.trigger('left');
-
-        expect(global.App.navigate).toHaveBeenCalledWith('result', true);
-      });
-
-    });
 
         describe('bottom', function () {
 
@@ -86,8 +116,7 @@ describe('The Quiz Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the result page', function () {
-
+      it('should take the user to the result page', function () { 
         quizPage.trigger('face');
 
         expect(global.App.navigate).toHaveBeenCalledWith('result', true);
