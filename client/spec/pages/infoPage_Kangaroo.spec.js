@@ -1,6 +1,6 @@
 'use strict';
 
-var InfoPage = require('../../src/js/pages/infoPage_Kangaroo'),
+var InfoPage = require('../../src/js/pages/infoPage'),
   Router = require('../../src/js/router'),
   App = require('../../src/js/app');
 
@@ -27,26 +27,12 @@ describe('The Kangaroo Info Page', function() {
       });
 
       it('right button should take the user to the Koala page', function () {
-
+        infoPage.render();
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
         infoPage.trigger('right');
-        expect(global.App.navigate).toHaveBeenCalledWith('koala', true);
-
-      });
-
-    });
-
-
-  describe('top', function () {
-
-      beforeEach(function () {
-        spyOn(global.App, 'navigate');
-      });
-
-      it('top button should take the user to the koala page', function () {
-
-        infoPage.trigger('top');
-
-        expect(global.App.navigate).toHaveBeenCalledWith('koala', true);
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('right');
+        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
       });
 
     });
@@ -57,15 +43,33 @@ describe('The Kangaroo Info Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('left button should take the user to the Koala page', function () {
-
+      it('right button should take the user to the Koala page', function () {
+        infoPage.render();
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
         infoPage.trigger('left');
-        expect(global.App.navigate).toHaveBeenCalledWith('koala', true);
-
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('left');
+        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
       });
 
     });
 
+    describe('top', function () {
+
+      beforeEach(function () {
+        spyOn(global.App, 'navigate');
+      });
+
+      it('right button should take the user to the Koala page', function () {
+        infoPage.render();
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('top');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('top');
+        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
+      });
+
+    });
 
     describe('bottom', function () {
 
@@ -73,11 +77,13 @@ describe('The Kangaroo Info Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('bottom should take the user to the koala page', function () {
-
+      it('right button should take the user to the Koala page', function () {
+        infoPage.render();
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
         infoPage.trigger('bottom');
-
-        expect(global.App.navigate).toHaveBeenCalledWith('koala', true);
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('bottom');
+        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
       });
 
     });
@@ -88,22 +94,22 @@ describe('The Kangaroo Info Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('face button should take the user to the koala page', function () {
-
+      it('right button should take the user to the Koala page', function () {
+        infoPage.render();
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
         infoPage.trigger('face');
-
-        expect(global.App.navigate).toHaveBeenCalledWith('koala', true);
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('face');
+        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
       });
 
     });
-
-  });
 
   describe('rendering', function () {
 
     it('should produce the correct HTML', function () {
       infoPage.render();
-      expect(infoPage.el.innerHTML).toContain('<p>Kangaroo</p>');
+      expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
     });
 
     it('returns the view object', function() {
@@ -111,5 +117,7 @@ describe('The Kangaroo Info Page', function() {
     });
 
   });
+
+});
 
 });

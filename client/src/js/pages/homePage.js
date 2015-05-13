@@ -17,7 +17,7 @@ var homeScreen = PageView.extend({
   },
 
   goToInfo: function() {
-    global.App.navigate('kangaroo', true);
+    global.App.navigate('info', true);
   },
 
   render: function() {
