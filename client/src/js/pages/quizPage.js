@@ -13,6 +13,7 @@ var QuizView = PageView.extend({
 
   id: 'quiz',
   size: 2,
+
   // assign answer to have a default index
   index: 0,
 
@@ -31,18 +32,20 @@ var QuizView = PageView.extend({
   },
 
   scrollAnswerLeft: function() {
-    if((this.index - 1) < 0) {
+    if ((this.index - 1) < 0) {
       return;
     }
+
     this.index -= 1;
 
     this.render();
   },
 
   scrollAnswerRight: function() {
-    if((this.index + 1) >= this.size) {
+    if ((this.index + 1) >= this.size) {
       return;
     }
+
     this.index += 1;
     this.render();
   },
