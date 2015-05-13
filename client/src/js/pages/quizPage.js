@@ -21,22 +21,6 @@ var QuizView = PageView.extend({
     face: 'goToResultPage'
   },
 
-  // goToContacts: function() {
-  //   global.App.navigate('contacts', true);
-  // },
-
-  // goToQuiz: function() {
-  //   global.App.navigate('quiz', true);
-  // },
-
-  // scrollUp: function() {
-  //   $('#watch-face').animate({scrollTop: '-=70px'});
-  // },
-
-  // scrollDown: function() {
-  //   $('#watch-face').animate({scrollTop: '+=70px'});
-  // },
-
   goToResultPage: function() {
     global.App.navigate('result', true);
   },
