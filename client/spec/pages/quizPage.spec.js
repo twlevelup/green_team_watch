@@ -102,7 +102,7 @@ describe('The Quiz Page', function() {
 
     it('should produce the correct HTML', function () {
       quizPage.render();
-      expect(quizPage.el.innerHTML).toContain('<div>Quiz</div>');
+      expect(quizPage.el.innerHTML).toContain('<div>What animal is this?</div>');
     });
 
     it('returns the view object', function() {
