@@ -129,9 +129,20 @@ describe('The Quiz Page', function() {
 
   describe('rendering', function () {
 
-    it('should produce the correct HTML', function () {
+    it('should produce the correct HTML <div>quiz</div>', function () {
       quizPage.render();
       expect(quizPage.el.innerHTML).toContain('<div>What animal is this?</div>');
+    });
+
+
+   it('should produce the correct image of a Kangaroo.', function () {
+      quizPage.render();
+      expect(quizPage.el.innerHTML).toContain('/images/kangaroo.png');
+    });
+
+    it('should produce the correct HTML text <p>kangaroo</p>', function () {
+      quizPage.render();
+      expect(quizPage.el.innerHTML).toContain('<p>Kangaroo</p>');
     });
 
     it('returns the view object', function() {

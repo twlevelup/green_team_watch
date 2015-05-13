@@ -42,11 +42,11 @@ describe('The Kangaroo Info Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('top button should take the user to the quiz page', function () {
+      it('top button should take the user to the koala page', function () {
 
         infoPage.trigger('top');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('koala', true);
       });
 
     });
@@ -73,11 +73,11 @@ describe('The Kangaroo Info Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('bottom should take the user to the quiz page', function () {
+      it('bottom should take the user to the koala page', function () {
 
         infoPage.trigger('bottom');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('koala', true);
       });
 
     });
@@ -88,11 +88,11 @@ describe('The Kangaroo Info Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('face button should take the user to the quiz page', function () {
+      it('face button should take the user to the koala page', function () {
 
         infoPage.trigger('face');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('koala', true);
       });
 
     });

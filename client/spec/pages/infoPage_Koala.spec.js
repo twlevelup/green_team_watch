@@ -26,7 +26,7 @@ describe('The Koala Info Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('right button should take the user to the Kangaroo page', function () {
+      it('right button should take the user to the quiz page', function () {
 
         infoPage.trigger('right');
 
@@ -57,7 +57,7 @@ describe('The Koala Info Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('left button should take the user to the Kangaroo page', function () {
+      it('left button should take the user to the quiz page', function () {
 
         infoPage.trigger('left');
 
@@ -101,7 +101,12 @@ describe('The Koala Info Page', function() {
 
   describe('rendering', function () {
 
-    it('should produce the correct HTML', function () {
+   it('should produce the correct image of a koala', function () {
+      infoPage.render();
+      expect(infoPage.el.innerHTML).toContain('/images/koala.png');
+    });
+
+    it('should produce the correct HTML text Koala', function () {
       infoPage.render();
       expect(infoPage.el.innerHTML).toContain('<p>Koala</p>');
     });
