@@ -3,6 +3,8 @@
 var Backbone = require('backbone'),
  $ = require('jquery');
 
+var answers = ['kangaroo', 'koala'];
+
 Backbone.$ = $;
 
 var PageView = require('../framework/page');
@@ -10,6 +12,7 @@ var PageView = require('../framework/page');
 var QuizView = PageView.extend({
 
   id: 'quiz',
+  answer: '',
 
   template: require('../../templates/pages/quiz.hbs'),
 
@@ -27,7 +30,7 @@ var QuizView = PageView.extend({
 
   render: function() {
 
-    this.$el.html(this.template());
+    this.$el.html(this.template({ answer: answers[1]}));
 
     return this;
 
