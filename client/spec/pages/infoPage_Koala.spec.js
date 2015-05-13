@@ -26,7 +26,7 @@ describe('The Koala Info Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('right button should take the user to the Kangaroo page', function () {
+      it('right button should take the user to the quiz page', function () {
 
         infoPage.trigger('right');
 
@@ -57,7 +57,7 @@ describe('The Koala Info Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('left button should take the user to the Kangaroo page', function () {
+      it('left button should take the user to the quiz page', function () {
 
         infoPage.trigger('left');
 

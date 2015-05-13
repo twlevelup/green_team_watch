@@ -17,19 +17,15 @@ var InfoView = PageView.extend({
   template: require('../../templates/pages/info_Koala.hbs'),
 
   buttonEvents: {
-      right: 'goToKangarooPage',
+      right: 'goToQuizPage',
       face: 'goToQuizPage',
-      left: 'goToKangarooPage',
+      left: 'goToQuizPage',
       top: 'goToQuizPage',
       bottom: 'goToQuizPage'
     },
 
   goToQuizPage: function() {
       global.App.navigate('quiz', true);
-    },
-
-  goToKangarooPage: function() {
-      global.App.navigate('kangaroo', true);
     },
 
   render: function() {

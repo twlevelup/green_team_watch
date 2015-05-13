@@ -18,14 +18,10 @@ var InfoView = PageView.extend({
 
   buttonEvents: {
       right: 'goToKoalaPage',
-      face: 'goToQuizPage',
+      face: 'goToKoalaPage',
       left: 'goToKoalaPage',
-      top: 'goToQuizPage',
-      bottom: 'goToQuizPage'
-    },
-
-  goToQuizPage: function() {
-      global.App.navigate('quiz', true);
+      top: 'goToKoalaPage',
+      bottom: 'goToKoalaPage'
     },
 
   goToKoalaPage: function() {
