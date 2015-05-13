@@ -104,7 +104,7 @@ describe('The Home Page', function() {
 
     it('should produce the correct HTML', function () {
       homePage.render();
-      expect(homePage.el.innerHTML).toContain('<div class="center">Press any key to start!</div>');
+      expect(homePage.el.innerHTML).toContain('<div class="center">Press any key to start the game!</div>');
     });
 
     it('returns the view object', function() {
