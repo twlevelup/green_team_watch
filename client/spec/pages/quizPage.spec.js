@@ -80,20 +80,20 @@ describe('The Quiz Page', function() {
 
     });       
 
-    describe('top', function () {
+    // describe('top', function () {
 
-      beforeEach(function () {
-        spyOn(global.App, 'navigate');
-      });
+    //   beforeEach(function () {
+    //     spyOn(global.App, 'navigate');
+    //   });
 
-      it('should take the user to the result page', function () {
+    //   it('should take the user to the result page', function () {
 
-        quizPage.trigger('top');
+    //     quizPage.trigger('top');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('result', true);
-      });
+    //     expect(global.App.navigate).toHaveBeenCalledWith('result', true);
+    //   });
 
-    });    
+    // });    
 
         describe('bottom', function () {
 
@@ -129,11 +129,62 @@ describe('The Quiz Page', function() {
 
   describe('rendering', function () {
 
-    it('should produce the correct HTML <div>quiz</div>', function () {
-      quizPage.render();
-      expect(quizPage.el.innerHTML).toContain('<div>What animal is this?</div>');
+
+    describe('generic stuff', function () {
+      it('should produce the correct HTML <div>quiz</div>', function () {
+        quizPage.render();
+        expect(quizPage.el.innerHTML).toContain('<div>What animal is this?</div>');
+      });
+
+      it('returns the view object', function() {
+        expect(quizPage.render()).toEqual(quizPage);
+      });
+
     });
 
+    describe('when they have not answered a question at all', function () {
+
+      beforeEach(function () {
+        quizPage.correct = null;
+      });
+
+      it('should not have a tick', function () {
+        quizPage.render();
+        expect(quizPage.el.innerHTML).not.toContain('/images/tick.png');        
+      });
+
+      it('should not have a cross', function () {
+        quizPage.render();
+        expect(quizPage.el.innerHTML).not.toContain('/images/cross.png');        
+      });
+
+    });
+
+    describe('when they have answered a question correctly', function () {
+
+      beforeEach(function () {
+        quizPage.correct = true;
+      });
+
+      it('should have a tick', function () {
+        quizPage.render();
+        expect(quizPage.el.innerHTML).toContain('/images/tick.png');        
+      });
+
+    });
+
+    describe('when they have answered a question incorrectly', function () {
+
+      beforeEach(function () {
+        quizPage.correct = false;
+      });
+
+      it('should have a tick', function () {
+        quizPage.render();
+        expect(quizPage.el.innerHTML).toContain('/images/cross.png');        
+      });
+
+    });
 
    it('should produce the correct image of a Kangaroo.', function () {
       quizPage.render();
@@ -145,9 +196,7 @@ describe('The Quiz Page', function() {
       expect(quizPage.el.innerHTML).toContain('kangaroo');
     });
 
-    it('returns the view object', function() {
-      expect(quizPage.render()).toEqual(quizPage);
-    });
+
 
   });
 

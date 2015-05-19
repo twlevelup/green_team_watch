@@ -13,6 +13,7 @@ var QuizView = PageView.extend({
 
   id: 'quiz',
   size: 2,
+  correct: null,
 
   // assign answer to have a default index
   index: 0,
@@ -28,7 +29,17 @@ var QuizView = PageView.extend({
   },
 
   goToResultPage: function() {
-    global.App.navigate('result', true);
+    // If this is a kanagroo
+    if ((this.index) === 0) {
+      this.correct = true;
+      this.render();
+      return;
+    }
+
+    this.correct = false;
+    this.render();
+
+    // global.App.navigate('result', true);
   },
 
   scrollAnswerLeft: function() {
@@ -52,8 +63,19 @@ var QuizView = PageView.extend({
 
   render: function() {
 
-    this.$el.html(this.template({ answer: answers[this.index]}));
+    this.$el.html(this.template({
+      answer: answers[this.index]
 
+      //answer
+      //tick/cross
+    }));
+    if (this.correct !== null && this.correct === true) {
+      this.$el.html(this.template($('tick')));
+    } else if (this.correct !== null && this.correct === false) {
+      this.$el.html(this.template($('cross')));
+    }
+
+    this.correct = null;
     return this;
 
   }

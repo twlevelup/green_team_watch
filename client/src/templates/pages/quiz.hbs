@@ -2,6 +2,20 @@
 
 <img src="/images/kangaroo.png" alt="kangaroo" />
 
+<div class='tick'> 
+<img src="/images/tick.png" alt="tick" />
+</div>
+
+<div class='cross'>
+<img src="/images/cross.png" alt="cross" />
+</div>
+
+<div class="tick">
+  {{#if answered}}
+    <img src="{{imgURL}}" />
+  {{/if}}
+</div>
+
 <p>
-  {{ answer }}
+ < {{ answer }} >
 </p>
