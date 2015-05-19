@@ -26,11 +26,11 @@ describe('The Home Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the info page', function () {
+      it('should take the user to the help page', function () {
 
         homePage.trigger('right');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('help', true);
       });
 
     });    
@@ -41,11 +41,11 @@ describe('The Home Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the info page', function () {
+      it('should take the user to the help page', function () {
 
         homePage.trigger('top');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('help', true);
       });
 
     });    
@@ -56,11 +56,11 @@ describe('The Home Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the info page', function () {
+      it('should take the user to the help page', function () {
 
         homePage.trigger('left');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('help', true);
       });
 
     });
@@ -71,11 +71,11 @@ describe('The Home Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the info page', function () {
+      it('should take the user to the help page', function () {
 
         homePage.trigger('bottom');
 
-        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('help', true);
 
       });
 
@@ -87,12 +87,12 @@ describe('The Home Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the info page', function () {
+      it('should take the user to the help page', function () {
 
         homePage.trigger('face');
 
 
-        expect(global.App.navigate).toHaveBeenCalledWith('info', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('help', true);
 
       });
 
