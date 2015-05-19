@@ -32,6 +32,24 @@ describe('The Kangaroo Info Page', function() {
         infoPage.trigger('right');
         expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
         infoPage.trigger('right');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('right');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('right');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('right');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('right');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('right');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('right');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('right');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('right');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('right');
         expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
       });
 
@@ -49,61 +67,64 @@ describe('The Kangaroo Info Page', function() {
         infoPage.trigger('left');
         expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
         infoPage.trigger('left');
-        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('left');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('left');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('left');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('left');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('left');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('left');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('left');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('left');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+        infoPage.trigger('left');
+        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
+       // expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
       });
 
     });
 
-    describe('top', function () {
+    // describe('top', function () {
 
-      beforeEach(function () {
-        spyOn(global.App, 'navigate');
-      });
+    //   beforeEach(function () {
+    //     spyOn(global.App, 'navigate');
+    //   });
 
-      it('right button should take the user to the Koala page', function () {
-        infoPage.render();
-        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
-        infoPage.trigger('top');
-        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
-        infoPage.trigger('top');
-        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
-      });
+    //   it('for future button use', function () {
 
-    });
+    //   });
 
-    describe('bottom', function () {
+    // });
 
-      beforeEach(function () {
-        spyOn(global.App, 'navigate');
-      });
+    // describe('bottom', function () {
 
-      it('right button should take the user to the Koala page', function () {
-        infoPage.render();
-        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
-        infoPage.trigger('bottom');
-        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
-        infoPage.trigger('bottom');
-        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
-      });
+    //   beforeEach(function () {
+    //     spyOn(global.App, 'navigate');
+    //   });
 
-    });
+    //   it('for future button use', function () {
+   
+    //   });
 
-    describe('face', function () {
+    // });
 
-      beforeEach(function () {
-        spyOn(global.App, 'navigate');
-      });
+    // describe('face', function () {
 
-      it('right button should take the user to the Koala page', function () {
-        infoPage.render();
-        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
-        infoPage.trigger('face');
-        expect(infoPage.el.innerHTML).toContain(infoPage.names[infoPage.index]);
-        infoPage.trigger('face');
-        expect(global.App.navigate).toHaveBeenCalledWith('quiz', true);
-      });
+    //   beforeEach(function () {
+    //     spyOn(global.App, 'navigate');
+    //   });
 
-    });
+    //   it('for future button use', function () {
+    //   });
+
+    // });
 
   describe('rendering', function () {
 

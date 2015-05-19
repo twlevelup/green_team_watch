@@ -17,17 +17,17 @@ var InfoView = PageView.extend({
 
   id: 'info',
   index: 0,
-  images: ['images/kangaroo.png', 'images/koala.png'],
-  names: ['kangaroo', 'koala'],
+  images: ['images/kangaroo.png', 'images/koala.png', 'images/echidna.png', 'images/blackSwan.png', 'images/platypus.png', 'images/emu.png', 'images/sugarGlider.png', 'images/rainbowLorikeet.png', 'images/dingo.png', 'images/crocodile.png'],
+  names: ['kangaroo', 'koala', 'Echidna', 'Black Swan', 'Platypus', 'Emu', 'Sugar Glider', 'Rainbow Lorikeet', 'Dingo', 'Crocodile'],
 
   template: require('../../templates/pages/info.hbs'),
 
   buttonEvents: {
       right: 'goToNextAnimal',
-      face: 'goToNextAnimal',
-      left: 'goToNextAnimal',
-      top: 'goToNextAnimal',
-      bottom: 'goToNextAnimal'
+      face: '',
+      left: 'goToPreviousAnimal',
+      top: '',
+      bottom: ''
     },
 
   goToNextAnimal: function() {
@@ -36,6 +36,15 @@ var InfoView = PageView.extend({
         this.goToNextPage();
       } else {
         this.index += 1;
+        this.render();
+      }
+    },
+
+  goToPreviousAnimal: function() {
+      if (this.index <= 0) {
+        this.index = 0;
+      } else {
+        this.index -= 1;
         this.render();
       }
     },
