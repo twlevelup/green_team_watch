@@ -3,9 +3,12 @@
 var Router = require('./router'),
   WatchFace = require('./framework/watchFace'),
   NotificationsPanel = require('./framework/notifications'),
-  availableNotificationTypes = require('./notifications/notificationsArray');
+  availableNotificationTypes = require('./notifications/notificationsConfig'),
+  clock = require('./framework/clock');
 
 var App = {
+
+  buttons: ['left', 'right', 'top', 'bottom', 'face'],
 
   navigate: function (route) {
     App.router.navigate(route, true);
@@ -42,6 +45,8 @@ var App = {
     $('#watch-face').click(function() {
       App.router.currentView.trigger('face');
     });
+
+    clock.start();
 
     Backbone.history.start();
 
