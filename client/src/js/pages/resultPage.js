@@ -45,7 +45,7 @@ var ResultView = PageView.extend({
   render: function() {
 
     this.$el.html(this.template());
-
+    global.App.score = 5;
     return this;
 
   }

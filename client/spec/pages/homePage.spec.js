@@ -111,6 +111,16 @@ describe('The Home Page', function() {
       expect(homePage.render()).toEqual(homePage);
     });
 
+    it('should return view object of score zero when no global score is defined', function() {
+      homePage.render();
+      expect(homePage.el.innerHTML).toContain('<center><font size="+2" color="000080"> 0</font></center>');
+    });
+
+    it('should return view object of score 10 when no global score is 10', function() {
+      homePage.render();
+      expect(homePage.el.innerHTML).toContain('<center><font size="+2" color="000080"> ' + global.App.score +'</font></center>');
+    });
+
   });
 
 });
