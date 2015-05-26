@@ -3,8 +3,6 @@
 var Backbone = require('backbone'),
  $ = require('jquery');
 
-var answers = ['kangaroo', 'koala'];
-
 Backbone.$ = $;
 
 var PageView = require('../framework/page');
@@ -12,11 +10,12 @@ var PageView = require('../framework/page');
 var QuizView = PageView.extend({
 
   id: 'quiz',
-  size: 2,
   correct: null,
 
   // assign answer to have a default index
   index: 0,
+  answers: ['kangaroo', 'koala', 'black swan', 'echidna'],
+
 
   template: require('../../templates/pages/quiz.hbs'),
 
@@ -48,12 +47,11 @@ var QuizView = PageView.extend({
     }
 
     this.index -= 1;
-
     this.render();
   },
 
   scrollAnswerRight: function() {
-    if ((this.index + 1) >= this.size) {
+    if ((this.index + 1) >= this.answers.length) {
       return;
     }
 
@@ -64,7 +62,7 @@ var QuizView = PageView.extend({
   render: function() {
 
     this.$el.html(this.template({
-      answer: answers[this.index]
+      answer: this.answers[this.index]
 
       //answer
       //tick/cross

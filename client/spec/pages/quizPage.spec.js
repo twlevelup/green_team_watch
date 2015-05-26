@@ -22,10 +22,6 @@ describe('The Quiz Page', function() {
 
     describe('right', function () {
 
-      beforeEach(function () {
-        quizPage.size = 2;
-      });
-
       describe('when index < size', function(){
 
         it('should add 1 to the answer index', function () {
@@ -42,10 +38,10 @@ describe('The Quiz Page', function() {
 
         it('should not add 1 to the answer index', function () {
 
-          quizPage.index = 1;
+          quizPage.index = 3;
           quizPage.trigger('right');
 
-          expect(quizPage.index).toEqual(1);
+          expect(quizPage.index).toEqual(3);
         });    
 
       });
