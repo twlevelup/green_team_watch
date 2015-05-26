@@ -51,7 +51,6 @@ var App = {
     Backbone.history.start();
 
   }
-
 };
 
 global.App = App;
