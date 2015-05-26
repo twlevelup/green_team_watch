@@ -102,9 +102,24 @@ describe('The Help Page', function() {
 
   describe('rendering', function () {
 
-    it('should produce the correct HTML', function () {
+    //it('should produce the correct HTML', function () {
+    //  helpPage.render();
+    //  expect(helpPage.el.innerHTML).toContain('<p><small>How to Play:</small></p>');
+    //});
+
+    it('should produce the correct image of a circle.', function () {
       helpPage.render();
-      expect(helpPage.el.innerHTML).toContain('<p>How to Play:</p>');
+      expect(helpPage.el.innerHTML).toContain('/images/circle.png');
+    });
+
+    it('should produce the correct image of a left button.', function () {
+      helpPage.render();
+      expect(helpPage.el.innerHTML).toContain('/images/leftButton.png');
+    });
+
+    it('should produce the correct image of a right button.', function () {
+      helpPage.render();
+      expect(helpPage.el.innerHTML).toContain('/images/rightButton.png');
     });
 
     it('returns the view object', function() {
