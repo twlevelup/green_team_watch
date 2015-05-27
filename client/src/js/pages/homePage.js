@@ -21,11 +21,11 @@ var homeScreen = PageView.extend({
   },
 
   render: function() {
-    if (global.App.score === undefined) {
-      global.App.score = 0;
+    if (global.App.accumulatedScore === undefined) {
+      global.App.accumulatedScore = 0;
     }
 
-    this.$el.html(this.template({score:global.App.score}));
+    this.$el.html(this.template({accumulatedScore:global.App.accumulatedScore}));
 
     return this;
   }

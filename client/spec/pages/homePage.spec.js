@@ -104,7 +104,7 @@ describe('The Home Page', function() {
 
     it('should produce the correct HTML', function () {
       homePage.render();
-      expect(homePage.el.innerHTML).toContain('<div>Press any key to start the game!</div>');
+      expect(homePage.el.innerHTML).toContain('<div>Press any button!</div>');
     });
 
     it('returns the view object', function() {
@@ -118,7 +118,7 @@ describe('The Home Page', function() {
 
     it('should return view object of score 10 when no global score is 10', function() {
       homePage.render();
-      expect(homePage.el.innerHTML).toContain('<center><font size="+2" color="000080"> ' + global.App.score +'</font></center>');
+      expect(homePage.el.innerHTML).toContain('<center><font size="+2" color="000080"> ' + global.App.accumulatedScore +'</font></center>');
     });
 
   });
