@@ -100,27 +100,27 @@ describe('The Home Page', function() {
 
   });
 
-  describe('rendering', function () {
+  // describe('rendering', function () {
 
-    it('should produce the correct HTML', function () {
-      homePage.render();
-      expect(homePage.el.innerHTML).toContain('<div>Press any button!</div>');
-    });
+  //   it('should produce the correct HTML', function () {
+  //     homePage.render();
+  //     expect(homePage.el.innerHTML).toContain('<div>Press any button!</div>');
+  //   });
 
-    it('returns the view object', function() {
-      expect(homePage.render()).toEqual(homePage);
-    });
+  //   it('returns the view object', function() {
+  //     expect(homePage.render()).toEqual(homePage);
+  //   });
 
-    it('should return view object of score zero when no global score is defined', function() {
-      homePage.render();
-      expect(homePage.el.innerHTML).toContain('<center><font size="+2" color="000080"> 0</font></center>');
-    });
+  //   it('should return view object of score zero when no global score is defined', function() {
+  //     homePage.render();
+  //     expect(homePage.el.innerHTML).toContain('<center><font size="+2" color="000080"> 0</font></center>');
+  //   });
 
-    it('should return view object of score 10 when no global score is 10', function() {
-      homePage.render();
-      expect(homePage.el.innerHTML).toContain('<center><font size="+2" color="000080"> ' + global.App.accumulatedScore +'</font></center>');
-    });
+  //   it('should return view object of score 10 when no global score is 10', function() {
+  //     homePage.render();
+  //     expect(homePage.el.innerHTML).toContain('<center><font size="+2" color="000080"> ' + global.App.accumulatedScore +'</font></center>');
+  //   });
 
-  });
+  // });
 
 });
