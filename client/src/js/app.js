@@ -9,14 +9,15 @@ var Router = require('./router'),
 var App = {
 
   buttons: ['left', 'right', 'top', 'bottom', 'face'],
+        
+  cumulative_score: 0,
+  score: 0,
 
   navigate: function (route) {
     App.router.navigate(route, true);
   },
 
   start: function() {
-
-    // App.navigate = navigate;
 
     this.router = new Router();
 

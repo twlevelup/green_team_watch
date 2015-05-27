@@ -21,11 +21,8 @@ var homeScreen = PageView.extend({
   },
 
   render: function() {
-    if (global.App.accumulatedScore === undefined) {
-      global.App.accumulatedScore = 0;
-    }
 
-    this.$el.html(this.template({accumulatedScore:global.App.accumulatedScore}));
+    this.$el.html(this.template({cumulative_score:global.App.cumulative_score}));
 
     return this;
   }

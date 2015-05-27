@@ -1,4 +1,4 @@
-'use strict';
+      'use strict';
 
 var Backbone = require('backbone'),
  $ = require('jquery');
@@ -9,41 +9,36 @@ var PageView = require('../framework/page');
 
 var QuizView = PageView.extend({
 
-  id: 'quiz',
+  id: 'quiz3',
   correct: null,
 
   // assign answer to have a default index
   index: 0,
-  answers: ['kangaroo', 'koala', 'black swan', 'echidna'],
-  animal: "kangaroo",
+  answers: ['black swan', 'sugar glider', 'crocodile', 'echidna'],
+  animal: "blackSwan",
 
 
   template: require('../../templates/pages/quiz.hbs'),
 
   buttonEvents: {
-    right: 'scrollAnswerRight',
-    top: 'goToResultPage',
-    bottom: 'goToResultPage',
+    right: 'scrollAnswerRight', 
     left: 'scrollAnswerLeft',
     face: 'goToNextQuestion'
   },
 
   goToNextQuestion: function() {
-    // reset score
-    global.App.score=0;
-    // If this is a koala
+    // If this is a black swan
     if ((this.index) === 0) {
       this.correct = true;
       this.render();
-      global.App.score=0;
       global.App.score+=1;
-      global.App.navigate('quiz2', true);
+      global.App.navigate('quiz4', true);
       return;
-    } 
+    }
     this.correct = false;
     this.render();  
     global.App.score+=0;
-    global.App.navigate('quiz2', false);
+    global.App.navigate('quiz4', false);
   },
 
   scrollAnswerLeft: function() {

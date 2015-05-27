@@ -1,12 +1,12 @@
 'use strict';
 
-var QuizPage = require('../../src/js/pages/quizPage'),
+var QuizPage = require('../../src/js/pages/quizPage4'),
   Router = require('../../src/js/router'),
   App = require('../../src/js/app');
 
 global.App = App;
 
-describe('The Quiz Page', function() {
+describe('The Quiz Page - Question 4', function() {
 
   var quizPage;
 
@@ -74,7 +74,7 @@ describe('The Quiz Page', function() {
 
       });
 
-    });          
+    });       
 
     describe('face', function () {
 
@@ -82,12 +82,12 @@ describe('The Quiz Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the next question page on correct answer', function () { 
+      it('should take the user to the result page on correct answer', function () { 
         global.App.score = 0;
-        quizPage.index = 0;
+        quizPage.index = 2;
         quizPage.trigger('face');
         expect(global.App.score).toEqual(1);
-        expect(global.App.navigate).toHaveBeenCalledWith('quiz2', true);
+        expect(global.App.navigate).toHaveBeenCalledWith('quiz5', true);
       });
 
     });
@@ -98,12 +98,12 @@ describe('The Quiz Page', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the next question on incorrect answer', function () { 
+      it('should take the user to the result page on incorrect answer', function () { 
         global.App.score = 0;
         quizPage.index = 1;
         quizPage.trigger('face');
         expect(global.App.score).toEqual(0);
-        expect(global.App.navigate).toHaveBeenCalledWith('quiz2', false);
+        expect(global.App.navigate).toHaveBeenCalledWith('quiz5', false);
       });
 
     });
@@ -126,14 +126,14 @@ describe('The Quiz Page', function() {
 
     });
 
-   it('should produce the correct image of a Kangaroo.', function () {
+   it('should produce the correct image of a crocodile', function () {
       quizPage.render();
-      expect(quizPage.el.innerHTML).toContain('/images/kangaroo.png');
+      expect(quizPage.el.innerHTML).toContain('/images/crocodile.png');
     });
 
-    it('should produce the correct HTML text <p>kangaroo</p>', function () {
+    it('should produce the correct HTML text <p>crocodile</p>', function () {
       quizPage.render();
-      expect(quizPage.el.innerHTML).toContain('kangaroo');
+      expect(quizPage.el.innerHTML).toContain('crocodile');
     });
 
 

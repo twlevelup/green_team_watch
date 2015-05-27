@@ -1,4 +1,3 @@
-//result page
 'use strict';
 
 var Backbone = require('backbone'),
@@ -22,32 +21,26 @@ var ResultView = PageView.extend({
     face: 'goToHomePage'
   },
 
-  // goToContacts: function() {
-  //   global.App.navigate('contacts', true);
-  // },
-
-  // goToQuiz: function() {
-  //   global.App.navigate('quiz', true);
-  // },
-
-  // scrollUp: function() {
-  //   $('#watch-face').animate({scrollTop: '-=70px'});
-  // },
-
-  // scrollDown: function() {
-  //   $('#watch-face').animate({scrollTop: '+=70px'});
-  // },
-
   goToHomePage: function() {
     global.App.navigate('', true);
   },
 
   render: function() {
-    global.App.score = 5;
-    this.$el.html(this.template());
-    global.App.accumulatedScore += global.App.score;
-    return this;
+    if (global.App.score === 0) {
+      global.App.score+=1;
+    }
+    global.App.cumulative_score+=global.App.score;
 
+    var words = "STARS";
+    if(global.App.score === 1){
+      words = "STAR";
+    }
+
+    this.$el.html(this.template({
+      score: global.App.score,
+      words: words
+    }));
+    return this;
   }
 
 });
