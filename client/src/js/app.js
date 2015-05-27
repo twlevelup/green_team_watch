@@ -18,8 +18,6 @@ var App = {
 
   start: function() {
 
-    // App.navigate = navigate;
-
     this.router = new Router();
 
     this.watchFace = new WatchFace();

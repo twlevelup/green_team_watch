@@ -1,4 +1,3 @@
-//result page
 'use strict';
 
 var Backbone = require('backbone'),
@@ -22,34 +21,15 @@ var ResultView = PageView.extend({
     face: 'goToHomePage'
   },
 
-  // goToContacts: function() {
-  //   global.App.navigate('contacts', true);
-  // },
-
-  // goToQuiz: function() {
-  //   global.App.navigate('quiz', true);
-  // },
-
-  // scrollUp: function() {
-  //   $('#watch-face').animate({scrollTop: '-=70px'});
-  // },
-
-  // scrollDown: function() {
-  //   $('#watch-face').animate({scrollTop: '+=70px'});
-  // },
-
   goToHomePage: function() {
     global.App.navigate('', true);
   },
 
   render: function() {
-
     this.$el.html(this.template());
-    global.App.score = 5;
     return this;
-
   }
-
+  
 });
 
 module.exports = ResultView;

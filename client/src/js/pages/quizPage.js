@@ -66,15 +66,7 @@ var QuizView = PageView.extend({
     this.$el.html(this.template({
       answer: this.answers[this.index],
       animal: this.animal
-
-      //answer
-      //tick/cross
     }));
-    if (this.correct !== null && this.correct === true) {
-      this.$el.html(this.template($('tick')));
-    } else if (this.correct !== null && this.correct === false) {
-      this.$el.html(this.template($('cross')));
-    }
 
     this.correct = null;
     return this;

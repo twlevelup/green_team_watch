@@ -76,7 +76,7 @@ describe('The Quiz Page', function() {
 
     });          
 
-        describe('bottom', function () {
+    describe('face', function () {
 
       beforeEach(function () {
         spyOn(global.App, 'navigate');
@@ -92,7 +92,7 @@ describe('The Quiz Page', function() {
 
     });
 
-        describe('face', function () {
+    describe('face', function () {
 
       beforeEach(function () {
         spyOn(global.App, 'navigate');
