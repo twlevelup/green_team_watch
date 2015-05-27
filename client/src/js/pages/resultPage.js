@@ -26,6 +26,9 @@ var ResultView = PageView.extend({
   },
 
   render: function() {
+    if (global.App.score === 0) {
+      global.App.score+=1;
+    }
     global.App.cumulative_score+=global.App.score;
     this.$el.html(this.template({
       score: global.App.score

@@ -86,7 +86,7 @@ describe('The Quiz Page - Question 5', function() {
         global.App.score = 0;
         quizPage.index = 1;
         quizPage.trigger('face');
-        expect(global.App.score).toEqual(5);
+        expect(global.App.score).toEqual(1);
         expect(global.App.navigate).toHaveBeenCalledWith('result', true);
       });
 
@@ -102,7 +102,7 @@ describe('The Quiz Page - Question 5', function() {
         global.App.score = 0;
         quizPage.index = 3;
         quizPage.trigger('face');
-        expect(global.App.score).toEqual(1);
+        expect(global.App.score).toEqual(0);
         expect(global.App.navigate).toHaveBeenCalledWith('result', false);
       });
 

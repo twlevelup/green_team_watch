@@ -31,13 +31,13 @@ var QuizView = PageView.extend({
     if ((this.index) === 1) {
       this.correct = true;
       this.render();
-      global.App.score+=5;
+      global.App.score+=1;
       global.App.navigate('result', true);
       return;
     }
     this.correct = false;
     this.render();  
-    global.App.score+=1;
+    global.App.score+=0;
     global.App.navigate('result', false);
   },
 
