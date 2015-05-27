@@ -30,8 +30,15 @@ var ResultView = PageView.extend({
       global.App.score+=1;
     }
     global.App.cumulative_score+=global.App.score;
+
+    var words = "STARS";
+    if(global.App.score === 1){
+      words = "STAR";
+    }
+
     this.$el.html(this.template({
-      score: global.App.score
+      score: global.App.score,
+      words: words
     }));
     return this;
   }

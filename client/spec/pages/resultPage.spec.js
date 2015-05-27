@@ -100,9 +100,19 @@ describe('The Result Page', function() {
 
   describe('rendering', function () {
 
-    it('should produce the correct HTML', function () {
+    it('should produce the "WELL DONE!!"', function () {
       resultPage.render();
-      expect(resultPage.el.innerHTML).toContain('<div>Result</div>');
+      expect(resultPage.el.innerHTML).toContain('WELL DONE!!');
+    });
+
+    it('should produce the correct image of a coin.', function () {
+      resultPage.render();
+      expect(resultPage.el.innerHTML).toContain('/images/MoneyCoin.gif');
+    });
+
+    it('should produce the "YOU SCORED"', function () {
+      resultPage.render();
+      expect(resultPage.el.innerHTML).toContain('YOU SCORED');
     });
 
     it('returns the view object', function() {
