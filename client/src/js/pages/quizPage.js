@@ -29,10 +29,13 @@ var QuizView = PageView.extend({
   },
 
   goToNextQuestion: function() {
+    // reset score
+    global.App.score=0;
     // If this is a koala
     if ((this.index) === 0) {
       this.correct = true;
       this.render();
+      global.App.score=0;
       global.App.score+=5;
       global.App.navigate('quiz2', true);
       return;

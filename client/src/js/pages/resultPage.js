@@ -26,10 +26,13 @@ var ResultView = PageView.extend({
   },
 
   render: function() {
-    this.$el.html(this.template());
+    global.App.cumulative_score+=global.App.score;
+    this.$el.html(this.template({
+      score: global.App.score
+    }));
     return this;
   }
-  
+
 });
 
 module.exports = ResultView;

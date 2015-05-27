@@ -25,7 +25,7 @@ var homeScreen = PageView.extend({
       global.App.score = 0;
     }
 
-    this.$el.html(this.template({score:global.App.score}));
+    this.$el.html(this.template({cumulative_score:global.App.cumulative_score}));
 
     return this;
   }
