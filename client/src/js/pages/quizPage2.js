@@ -15,7 +15,7 @@ var QuizView = PageView.extend({
   // assign answer to have a default index
   index: 0,
   answers: ['black swan', 'emu', 'koala', 'echidna'],
-  animal: "koala",
+  animal: 'koala',
 
   template: require('../../templates/pages/quiz.hbs'),
 
