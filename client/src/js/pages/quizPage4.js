@@ -15,12 +15,12 @@ var QuizView = PageView.extend({
   // assign answer to have a default index
   index: 0,
   answers: ['dingo', 'crocodile', 'sugar glider', 'echidna'],
-  animal: "crocodile",
+  animal: 'crocodile',
 
   template: require('../../templates/pages/quiz.hbs'),
 
   buttonEvents: {
-    right: 'scrollAnswerRight', 
+    right: 'scrollAnswerRight',
     left: 'scrollAnswerLeft',
     face: 'goToNextQuestion'
   },
@@ -36,7 +36,7 @@ var QuizView = PageView.extend({
     }
 
     this.correct = false;
-    this.render();  
+    this.render();
     global.App.score += 0;
     global.App.navigate('quiz5', false);
   },

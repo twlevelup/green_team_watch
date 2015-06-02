@@ -10,7 +10,7 @@ var App = {
 
   buttons: ['left', 'right', 'top', 'bottom', 'face'],
         
-  cumulative_score: 0,
+  cumulativeScore: 0,
   score: 0,
 
   navigate: function (route) {

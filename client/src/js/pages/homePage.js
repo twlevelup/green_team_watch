@@ -22,7 +22,7 @@ var homeScreen = PageView.extend({
 
   render: function() {
 
-    this.$el.html(this.template({cumulative_score:global.App.cumulative_score}));
+    this.$el.html(this.template({cumulativeScore:global.App.cumulativeScore}));
 
     return this;
   }

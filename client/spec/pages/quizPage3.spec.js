@@ -130,7 +130,6 @@ describe('The Quiz Page - Question 3', function() {
       quizPage.render();
       expect(quizPage.el.innerHTML).toContain('/images/blackSwan.png');
     });
-    
 
 
 
