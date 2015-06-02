@@ -82,9 +82,9 @@ describe('The Quiz Page - Question 4', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the result page on correct answer', function () { 
+      it('should take the user to the quiz page on correct answer', function () {
         global.App.score = 0;
-        quizPage.index = 2;
+        quizPage.index = 1;
         quizPage.trigger('face');
         expect(global.App.score).toEqual(1);
         expect(global.App.navigate).toHaveBeenCalledWith('quiz5', true);
@@ -98,9 +98,9 @@ describe('The Quiz Page - Question 4', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the result page on incorrect answer', function () { 
+      it('should take the user to the quiz page on incorrect answer', function () {
         global.App.score = 0;
-        quizPage.index = 1;
+        quizPage.index = 0;
         quizPage.trigger('face');
         expect(global.App.score).toEqual(0);
         expect(global.App.navigate).toHaveBeenCalledWith('quiz5', false);

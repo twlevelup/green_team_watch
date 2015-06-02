@@ -26,10 +26,10 @@ describe('The Quiz Page - Question 3', function() {
 
         it('should add 1 to the answer index', function () {
 
-          quizPage.index = 0;
+          quizPage.index = 2;
           quizPage.trigger('right');
 
-          expect(quizPage.index).toEqual(1);
+          expect(quizPage.index).toEqual(3);
         });
 
       });
@@ -82,9 +82,9 @@ describe('The Quiz Page - Question 3', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the result page on correct answer', function () { 
+      it('should take the user to the qui4 page on correct answer', function () {
         global.App.score = 0;
-        quizPage.index = 0;
+        quizPage.index = 3;
         quizPage.trigger('face');
         expect(global.App.score).toEqual(1);
         expect(global.App.navigate).toHaveBeenCalledWith('quiz4', true);
@@ -130,11 +130,7 @@ describe('The Quiz Page - Question 3', function() {
       quizPage.render();
       expect(quizPage.el.innerHTML).toContain('/images/blackSwan.png');
     });
-
-    it('should produce the correct HTML text <p>black swan</p>', function () {
-      quizPage.render();
-      expect(quizPage.el.innerHTML).toContain('black swan');
-    });
+    
 
 
 

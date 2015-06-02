@@ -14,9 +14,8 @@ var QuizView = PageView.extend({
 
   // assign answer to have a default index
   index: 0,
-  answers: ['black swan', 'sugar glider', 'crocodile', 'echidna'],
+  answers: ['crocodile', 'sugar glider', 'echidna', 'black swan'],
   animal: "blackSwan",
-
 
   template: require('../../templates/pages/quiz.hbs'),
 
@@ -28,16 +27,17 @@ var QuizView = PageView.extend({
 
   goToNextQuestion: function() {
     // If this is a black swan
-    if ((this.index) === 0) {
+    if ((this.index) === 3) {
       this.correct = true;
       this.render();
-      global.App.score+=1;
+      global.App.score += 1;
       global.App.navigate('quiz4', true);
       return;
     }
+
     this.correct = false;
     this.render();  
-    global.App.score+=0;
+    global.App.score += 0;
     global.App.navigate('quiz4', false);
   },
 

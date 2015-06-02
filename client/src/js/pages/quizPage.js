@@ -17,7 +17,6 @@ var QuizView = PageView.extend({
   answers: ['kangaroo', 'koala', 'black swan', 'echidna'],
   animal: "kangaroo",
 
-
   template: require('../../templates/pages/quiz.hbs'),
 
   buttonEvents: {
@@ -30,19 +29,21 @@ var QuizView = PageView.extend({
 
   goToNextQuestion: function() {
     // reset score
-    global.App.score=0;
+    global.App.score = 0;
+
     // If this is a koala
     if ((this.index) === 0) {
       this.correct = true;
       this.render();
-      global.App.score=0;
-      global.App.score+=1;
+      global.App.score = 0;
+      global.App.score += 1;
       global.App.navigate('quiz2', true);
       return;
     } 
+
     this.correct = false;
     this.render();  
-    global.App.score+=0;
+    global.App.score += 0;
     global.App.navigate('quiz2', false);
   },
 

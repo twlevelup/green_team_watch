@@ -14,9 +14,8 @@ var QuizView = PageView.extend({
 
   // assign answer to have a default index
   index: 0,
-  answers: ['emu', 'dingo', 'echidna', 'rainbow lorikeet'],
+  answers: ['rainbow lorikeet', 'emu', 'echidna', 'dingo'],
   animal: "dingo",
-
 
   template: require('../../templates/pages/quiz.hbs'),
 
@@ -28,16 +27,17 @@ var QuizView = PageView.extend({
 
   goToNextQuestion: function() {
     // If this is a dingo
-    if ((this.index) === 1) {
+    if ((this.index) === 3) {
       this.correct = true;
       this.render();
-      global.App.score+=1;
+      global.App.score += 1;
       global.App.navigate('result', true);
       return;
     }
+
     this.correct = false;
     this.render();  
-    global.App.score+=0;
+    global.App.score += 0;
     global.App.navigate('result', false);
   },
 

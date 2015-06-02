@@ -27,12 +27,13 @@ var ResultView = PageView.extend({
 
   render: function() {
     if (global.App.score === 0) {
-      global.App.score+=1;
+      global.App.score += 1;
     }
-    global.App.cumulative_score+=global.App.score;
+
+    global.App.cumulative_score += global.App.score;
 
     var words = "STARS";
-    if(global.App.score === 1){
+    if (global.App.score === 1) {
       words = "STAR";
     }
 

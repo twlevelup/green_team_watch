@@ -26,10 +26,10 @@ describe('The Quiz Page - Question 2', function() {
 
         it('should add 1 to the answer index', function () {
 
-          quizPage.index = 0;
+          quizPage.index = 1;
           quizPage.trigger('right');
 
-          expect(quizPage.index).toEqual(1);
+          expect(quizPage.index).toEqual(2);
         });
 
       });
@@ -82,9 +82,9 @@ describe('The Quiz Page - Question 2', function() {
         spyOn(global.App, 'navigate');
       });
 
-      it('should take the user to the result page on correct answer', function () { 
+      it('should take the user to the quiz3 page on correct answer', function () {
         global.App.score = 0;
-        quizPage.index = 0;
+        quizPage.index = 2;
         quizPage.trigger('face');
         expect(global.App.score).toEqual(1);
         expect(global.App.navigate).toHaveBeenCalledWith('quiz3', true);

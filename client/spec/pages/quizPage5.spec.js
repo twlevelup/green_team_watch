@@ -26,10 +26,10 @@ describe('The Quiz Page - Question 5', function() {
 
         it('should add 1 to the answer index', function () {
 
-          quizPage.index = 0;
+          quizPage.index = 4;
           quizPage.trigger('right');
 
-          expect(quizPage.index).toEqual(1);
+          expect(quizPage.index).toEqual(4);
         });
 
       });
@@ -84,7 +84,7 @@ describe('The Quiz Page - Question 5', function() {
 
       it('should take the user to the result page on correct answer', function () { 
         global.App.score = 0;
-        quizPage.index = 1;
+        quizPage.index = 3;
         quizPage.trigger('face');
         expect(global.App.score).toEqual(1);
         expect(global.App.navigate).toHaveBeenCalledWith('result', true);
@@ -100,7 +100,7 @@ describe('The Quiz Page - Question 5', function() {
 
       it('should take the user to the result page on incorrect answer', function () { 
         global.App.score = 0;
-        quizPage.index = 3;
+        quizPage.index = 1;
         quizPage.trigger('face');
         expect(global.App.score).toEqual(0);
         expect(global.App.navigate).toHaveBeenCalledWith('result', false);
