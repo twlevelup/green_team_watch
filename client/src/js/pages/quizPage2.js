@@ -20,7 +20,7 @@ var QuizView = PageView.extend({
   template: require('../../templates/pages/quiz.hbs'),
 
   buttonEvents: {
-    right: 'scrollAnswerRight', 
+    right: 'scrollAnswerRight',
     left: 'scrollAnswerLeft',
     face: 'goToNextQuestion'
   },
@@ -36,7 +36,7 @@ var QuizView = PageView.extend({
     }
 
     this.correct = false;
-    this.render();  
+    this.render();
     global.App.score += 0;
     global.App.navigate('quiz3', false);
   },
